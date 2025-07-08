@@ -84,28 +84,30 @@ function getComputerChoice(max){
     //calling the playgame function
     playGame()
 
-        function playGame(){
-        if(confirm("Are you ready?")){
+    function playGame(){
+        alert("Press ctrl + shift + J in your keyboard")
+
+            if(confirm("Are you ready?")){
                 console.log("Let's go!!")
             }
-        else{
+            else{
                 console.log("Oh no! You have missed a nice game.")
             }
-        for (i = 1; i <=5; i++){
+            for (i = 1; i <=5; i++){
             
             console.log("ROUND " + i)
             let humanSelection = getHumanChoice()
             let computerSelection = getComputerChoice(3)
             playRound(humanSelection, computerSelection)
-        }
-        console.log("YOUR SCORE : " + humanScore)
-        console.log("OPPONENT SCORE : " + computerScore)
-        console.log("TOTAL DRAWS : "+draw)
+            }
+            console.log("YOUR SCORE : " + humanScore)
+            console.log("OPPONENT SCORE : " + computerScore)
+            console.log("TOTAL DRAWS : "+draw)
         
-        if(humanScore == computerScore){
+            if(humanScore == computerScore){
             console.log("MATCH DRAW.")
-        }
-        else if(humanScore != computerScore){
+            }
+            else if(humanScore != computerScore){
             if(humanScore > computerScore){
                 console.log("YEAH! YOU WON THE MATCH")
             }
@@ -113,13 +115,13 @@ function getComputerChoice(max){
                 console.log("OOPS! YOU LOSE THE MATCH.")
                
             }
-        }
-        if(confirm("Wanna Challenge Once more?")){
+            }
+            if(confirm("Wanna Challenge Once more?")){
             console.clear()
             playGame()
-        }
-        else{
+            }
+            else{
             console.log("Nice playing with you, see you later?")
-        }
+            }    
         
     }
